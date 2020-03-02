@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Sat Feb 29 12:19:18 CET 2020 -->
+
+<!DOCTYPE masterInformatique SYSTEM "masterILD.dtd">
+
+<masterInformatique>
+
+    <listeIntervenants>
+        <intervenant id="Rem">
+            <identifiant>Rem</identifiant>
+            <nom>Morin Remi</nom>
+            <mail> remiMorin&dom.lislab; </mail>
+            <site> remiMorin&dom.persoHost; </site>
+        </intervenant>
+
+        <intervenant id="JL">
+            <identifiant>Jean_Luc</identifiant>
+            <nom>Jean Luc Massat</nom>
+            <mail> jeanLucMassat&dom.lislab; </mail>
+            <site> jeanLucMassat&dom.persoHost; </site>
+            </intervenant >
+
+        <intervenant id="EG">
+            <identifiant>"Emm_G"</identifiant>
+            <nom>Emmanuel Godard</nom>
+            <mail> emmanuelGodard&dom.lislab; </mail>
+            <site> emmanuelGodard&dom.persoHost; </site>
+        </intervenant>
+
+        <intervenant id="Nono">
+            <identifiant>Noel_No</identifiant>
+            <nom>Noël Novelli</nom>
+            <mail> noelNovelli&dom.lislab; </mail>
+            <site> noelNovelli&dom.persoHost; </site>
+        </intervenant>
+
+
+    </listeIntervenants>
+    <parcours>
+        <nom> ILD Ingénierie du logiciel et des données </nom>
+        <listeResponsables>
+            <responsable> Jean-Luc Massat </responsable> <responsable> Sana SELLAMI </responsable>
+        </listeResponsables>
+        <description>
+            <paragraphe> L'objectif de ce parcours est de former des informaticiens qui soient capables à la fois de travailler </paragraphe>
+            <paragraphe>sur les problématiques du développement logiciel (spécification, conception, réalisation, qualité, tests, plateforme JEE et WEB) </paragraphe>
+            <paragraphe>et sur les problématiques de la modélisation et du traitement de données (administration, stockage, intégration, visualisation, analyse). </paragraphe>
+
+            <paragraphe> Les points positifs de la formation : </paragraphe>
+            <liste-pucee>
+                <paragraphe> pas trop de maths mais quand même </paragraphe>
+                <paragraphe> apprentissage des tests logiciels pour des applis robustes </paragraphe>
+                <paragraphe> Cette formation est <gras> super </gras> avec  <italique> des profs de folie </italique>  </paragraphe>
+                <paragraphe> Plus d'info sur les bénéfices de la formation sur <link> plusdinfololgg.univ-amu.fr</link></paragraphe>
+            </liste-pucee>
+            <tab>
+                <tabLine>
+                    <tab-element>M1 Info ILD</tab-element> <tab-element>M2 Info ILD</tab-element>
+                </tabLine>
+                <tabLine>
+                    <tab-element> Des UEs communes à d'autres parcours et d'autres spécialisés ILD </tab-element>
+                    <tab-element> Uniquement des UEs spécialisés ILD  </tab-element>
+                </tabLine>
+            </tab>
+        </description>
+        <listeDebouches>
+            <metier>Développeur</metier>
+            <metier>Ingénieur</metier>
+            <metier>Assistant ingénieur</metier>
+            <metier>Architecte logiciel</metier>
+        </listeDebouches>
+        <ref-semestre ref="S1"/>
+        <ref-semestre ref="S2"/>
+        <ref-semestre ref="S3ILD"/>
+    </parcours>
+
+    <semestre id="S1">
+        <bloc>
+            <ue >
+                <nom> Reseaux </nom>
+                <identifiant> Res </identifiant>
+                <nbcredit> 4 </nbcredit>
+                <lieu> Luminy;St-Jerôme;St-Charles</lieu>
+                <refintervenant ref="EG"/>
+            </ue>
+
+            <ue >
+                <nom>Programmation Objet Concurrente</nom>
+                <identifiant> POC </identifiant>
+                <nbcredit> 3 </nbcredit>
+                <lieu> Luminy;St-Jerôme;St-Charles</lieu>
+                <refintervenant ref="Rem"/>
+            </ue>
+            <role>UEs Obligatoires</role>
+        </bloc>
+    </semestre>
+
+    <semestre id="S2">
+        <bloc>
+            <ue >
+                <nom> Donnees P-R </nom>
+                <identifiant> m1dPr </identifiant>
+                <nbcredit> 3 </nbcredit>
+                <refintervenant ref="JL"/>
+            </ue>
+            <ue >
+                <nom> Sécurité des applications </nom>
+                <identifiant> m1Secur </identifiant>
+                <nbcredit> 6 </nbcredit>
+                <refintervenant ref="JL"/>
+            </ue>
+            <role> UE obligatoires pour le parcours ILD </role>
+        </bloc>
+        <bloc>
+            <ue>
+                <nom> Cryptographie </nom>
+                <identifiant> m1Cryp </identifiant>
+                <nbcredit> 3 </nbcredit>
+                <refintervenant ref="Rem"/>
+            </ue>
+            <ue >
+                <nom> Interface Homme Machine </nom>
+                <identifiant> IHM </identifiant>
+                <nbcredit> 3 </nbcredit>
+                <refintervenant ref="Nono"/>
+            </ue>
+
+            <role> options à choisir </role>
+        </bloc>
+    </semestre>
+
+    <semestre id="S3ILD">
+        <bloc>
+            <ue>
+                <nom>Big Data</nom>
+                <identifiant>Big_D</identifiant>
+                <nbcredit>6</nbcredit>
+                <refintervenant ref="Nono"/>
+            </ue>
+            <ue >
+                <nom>Génie Logiciel 2</nom>
+                <identifiant>GL2</identifiant>
+                <nbcredit>6</nbcredit>
+                <refintervenant ref="JL"/>
+            </ue>
+            <role>UEs obligatoires</role>
+        </bloc>
+    </semestre>
+
+</masterInformatique>

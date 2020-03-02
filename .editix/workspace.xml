@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+<file open="false" path="/home/totor/DonneesPR/masterILD.xsl" type="XSLT">
+<param name="xslt.data.file" value="/home/totor/DonneesPR/masterILD.xml"/>
+<param name="xquery.fop" value="false"/>
+<param name="xquery.ok" value="true"/>
+<param name="xquery.openFile" value="false"/>
+<param name="xquery.result.file" value="/home/totor/DonneesPR/output.html"/>
+<param name="xquery.xslt.file" value="/home/totor/DonneesPR/masterILD.xsl"/>
+<param name="xquery.displayFile" value="false"/>
+<param name="xquery.data.file" value="/home/totor/DonneesPR/masterILD.xml"/>
+<param name="encoding" value="AUTOMATIC"/>
+</file>
+<file path="/home/totor/DonneesPR"/>
+<file open="true" path="/home/totor/DonneesPR/masterILD.xml" type="XML">
+<param name="lastView" value="Source"/>
+<param name="xquery.fop" value="false"/>
+<param name="xquery.ok" value="true"/>
+<param name="xquery.openFile" value="false"/>
+<param name="xquery.result.file" value="/home/totor/DonneesPR/output.html"/>
+<param name="xquery.xslt.file" value="/home/totor/DonneesPR/masterILD.xsl"/>
+<param name="xquery.displayFile" value="false"/>
+<param name="xquery.data.file" value="/home/totor/DonneesPR/masterILD.xml"/>
+</file>
+<file open="true" path="/home/totor/DonneesPR/masterILD.dtd" type="DTD">
+<param name="lastView" value="Source"/>
+</file>
+<file open="false" path="/home/totor/DonneesPR/masterILD.xsd" type="XSD">
+<param name="lastView" value="Source"/>
+</file>
+<file open="false" path="/home/totor/DonneesPR/output.html" type="XHTML">
+<param name="lastView" value="Source"/>
+</file>
+<file open="false" path="/home/totor/DonneesPR/masterILD2.xsl" type="XSLT"/>
+</root>

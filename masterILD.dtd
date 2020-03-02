@@ -1,0 +1,62 @@
+<!-- DTD created at Sat Feb 29 12:22:06 CET 2020 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+
+<!ELEMENT  tag (#PCDATA)>
+<!ATTLIST tag  attribute CDATA #REQUIRED>
+
+<!ELEMENT  masterInformatique    (listeIntervenants, parcours+, semestre+)>
+<!ELEMENT  ue  		(nom, identifiant, nbcredit, resume?, plan?, lieu?, refintervenant)>
+
+<!ELEMENT   nom  	        (#PCDATA)>
+<!ELEMENT   identifiant     (#PCDATA)>
+<!ELEMENT   nbcredit 	    (#PCDATA)>
+<!ELEMENT   resume  	    (#PCDATA)>
+<!ELEMENT   plan  	        (#PCDATA)>
+<!ELEMENT   lieu  	        (#PCDATA)>
+
+<!ELEMENT   intervenant     (identifiant, nom, mail, site)>
+<!ELEMENT   mail            (#PCDATA)>
+<!ELEMENT   site          	(#PCDATA)>
+
+<!-- Des entités internes permettant de générer adresses -->
+<!ENTITY    dom.lislab    "@lis-lab.fr" >
+<!ENTITY    dom.amuHost      ".univ-amu.fr" >
+<!ENTITY    dom.persoHost     "perso.luminy&dom.amuHost;" >
+
+<!--Possibilité d'ajouté une difficulté en attribut de "ue" -->
+<!ENTITY % difficulte "difficul (facile|moyen|difficile) #IMPLIED">
+<!ATTLIST ue %difficulte;>
+
+<!ELEMENT   listeIntervenants   (intervenant+) >
+<!ATTLIST   intervenant  id  ID  #IMPLIED>
+<!ELEMENT   refintervenant   EMPTY>
+<!ATTLIST   refintervenant  ref IDREF  #IMPLIED>
+
+<!ELEMENT   parcours        (nom, listeResponsables, description, listeDebouches,ref-semestre+)>
+<!ELEMENT   listeResponsables   (responsable+)>
+<!ELEMENT   responsable         (#PCDATA)>
+
+<!ELEMENT   listeDebouches      (metier+)>
+<!ELEMENT   metier              (#PCDATA)>
+
+<!ELEMENT   semestre            (bloc+)>
+<!ATTLIST   semestre    id ID #REQUIRED>
+
+<!ELEMENT   bloc                (ue+, role)>
+<!ELEMENT   role                (#PCDATA)>
+
+<!ELEMENT   ref-semestre        EMPTY>
+<!ATTLIST   ref-semestre    ref IDREF #REQUIRED>
+
+<!--Description usant d'un contenu mixte -->
+<!ELEMENT description (#PCDATA|paragraphe|tab|liste-pucee)*>
+
+<!ELEMENT paragraphe (#PCDATA|gras|link|italique)*>
+<!ELEMENT tab (tabLine+)>
+<!ELEMENT liste-pucee (paragraphe+)>
+
+<!ELEMENT gras (#PCDATA)>
+<!ELEMENT italique (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+
+<!ELEMENT tabLine (tab-element+)>
+<!ELEMENT tab-element (#PCDATA)>

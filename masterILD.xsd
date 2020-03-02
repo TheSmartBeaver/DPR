@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XSD document created with EditiX XML Editor (http://www.editix.com) at Sat Feb 29 12:33:33 CET 2020 -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="masterInformatique">
+  <xsd:complexType>
+    <!-- contenu ici -->
+  </xsd:complexType>
+</xsd:element>
+
+
+</xs:schema>
