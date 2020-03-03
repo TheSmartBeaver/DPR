@@ -1,14 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://java.sun.com/JSP/Page">
 
-<!-- New XSD document created with EditiX XML Editor (http://www.editix.com) at Sat Feb 29 12:33:33 CET 2020 -->
+    <xs:element name='masterInformatique'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='listeIntervenants'/>
+                <xs:element ref='parcours' maxOccurs='unbounded'/>
+                <xs:element ref='semestre' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name='ue'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='nom'/>
+                <xs:element ref='identifiant'/>
+                <xs:element ref='nbcredit'/>
+                <xs:element ref='resume' minOccurs='0' maxOccurs='1'/>
+                <xs:element ref='plan' minOccurs='0' maxOccurs='1'/>
+                <xs:element ref='lieu' minOccurs='0' maxOccurs='1'/>
+                <xs:element ref='refintervenant'/>
+            </xs:sequence>
+            <xs:attribute name='difficul' use='optional'>
+                <xs:simpleType>
+                    <xs:restriction base='xs:string'>
+                        <xs:enumeration value='facile'/>
+                        <xs:enumeration value='moyen'/>
+                        <xs:enumeration value='difficile'/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
 
-<xsd:element name="masterInformatique">
-  <xsd:complexType>
-    <!-- contenu ici -->
-  </xsd:complexType>
-</xsd:element>
+    <xs:element name='nom'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
 
+    <xs:element name='identifiant'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
 
+    <xs:element name='nbcredit'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='resume'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='plan'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='lieu'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='intervenant'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='identifiant'/>
+                <xs:element ref='nom'/>
+                <xs:element ref='mail'/>
+                <xs:element ref='site'/>
+            </xs:sequence>
+            <xs:attribute name='id' type='xs:ID' use='optional'/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='mail'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='site'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='listeIntervenants'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='intervenant' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='refintervenant'>
+        <xs:complexType>
+            <xs:attribute name='ref' type='xs:IDREF' use='optional'/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='parcours'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='nom'/>
+                <xs:element ref='listeResponsables'/>
+                <xs:element ref='description'/>
+                <xs:element ref='listeDebouches'/>
+                <xs:element ref='ref-semestre' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='listeResponsables'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='responsable' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='responsable'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='listeDebouches'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='metier' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='metier'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='semestre'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='bloc' maxOccurs='unbounded'/>
+            </xs:sequence>
+            <xs:attribute name='id' type='xs:ID' use='required'/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='bloc'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='ue' maxOccurs='unbounded'/>
+                <xs:element ref='role'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='role'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='ref-semestre'>
+        <xs:complexType>
+            <xs:attribute name='ref' type='xs:IDREF' use='required'/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='description'>
+        <xs:complexType mixed='true'>
+            <xs:choice minOccurs='0' maxOccurs='unbounded'>
+                <xs:element ref='paragraphe'/>
+                <xs:element ref='tab'/>
+                <xs:element ref='liste-pucee'/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='paragraphe'>
+        <xs:complexType mixed='true'>
+            <xs:choice minOccurs='0' maxOccurs='unbounded'>
+                <xs:element ref='gras'/>
+                <xs:element ref='link'/>
+                <xs:element ref='italique'/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='tab'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='tabLine' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='liste-pucee'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='paragraphe' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='gras'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='italique'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='link'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='tabLine'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='tab-element' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='tab-element'>
+        <xs:complexType mixed='true'>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

@@ -1,0 +1,21 @@
+Schéma XML : 
+
+- restriction : "base" peut prendre type xs:.... ou nom d'un simpleType
+- minInclusive/Exclusive pour borne
+- union des valeurs
+- complexType ???
+
+- xs:sequence permet de spécifier un contenu ordonné et éventuellement répété.
+- xs:choice permet d'exprimer un contenu alternatif et éventuellement répété.
+- xs:all permet d'indiquer une suite d'éléments sans préciser l'ordre d'apparition.
+- xs:group permet de regrouper un contenu complexe.
+- Contenu libre (xs:any)
+
+- extension de type ??
+- absence de valeur -> nil
+
+- Clef et référence
+
+- Vous pouvez ensuite préciser le type de chaque éléments pour valider le document XML de manière de plus en plus fine. Définissez un type simple nommé pour chaque élément. Utilisez à chaque fois le type le plus resserré.
+- Extension et restriction
+- clefs et références
