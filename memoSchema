@@ -19,3 +19,6 @@ Schéma XML :
 - Vous pouvez ensuite préciser le type de chaque éléments pour valider le document XML de manière de plus en plus fine. Définissez un type simple nommé pour chaque élément. Utilisez à chaque fois le type le plus resserré.
 - Extension et restriction
 - clefs et références
+
+-faire lien partout ? intervenant dans ue vers sa fiche
+-faire une page index.html --- accueil point d'entrée

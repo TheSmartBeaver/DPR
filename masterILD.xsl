@@ -12,12 +12,14 @@
 	xmlns:err="http://www.w3.org/2005/xqt-errors"
 	exclude-result-prefixes="xs xdt err fn">
 
+	<xsl:include href="parcoursUtils.xsl" />
+
 	<xsl:output
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
     method="html"/>
 	
 	<xsl:template match="/">
-		
+		<meta charset="iso-8859-1"/>
 		<html><body>
       		<xsl:call-template name="liste-des-enseignants" />
       		<xsl:call-template name="liste-des-unites" />
@@ -26,10 +28,6 @@
       		<a href="masterILD.html#Rem"> Lien vers Remi Morin </a>
       		<a href="masterILD.html#JL"> Lien vers Jean-Luc Massat </a>
     		</body></html>
-
-		<xsl:result-document href="foo.html">
-			<!-- add instructions to generate document content here -->
-		</xsl:result-document>
 
 		</xsl:template>
 		
@@ -47,9 +45,10 @@
 
 		<xsl:result-document href = "www/intervenants/{$name}.html" >
 			<html>
+				<meta charset="iso-8859-1"/>
 				<body>
 					<o1>
-						<li> <xsl:value-of select="$name" /> </li>
+						<li> <h2> <xsl:value-of select="$name" /> </h2> </li>
 						<li> <xsl:value-of select="./mail" /> </li>
 						<li> <xsl:value-of select="./site" /> </li>
 					</o1>
@@ -74,6 +73,7 @@
 		<xsl:for-each select="/descendant::ue">
 			<xsl:variable name="name" select="./nom"> </xsl:variable>
 			<xsl:result-document href = "www/UEs/{$name}.html" >
+				<meta charset="iso-8859-1"/>
 			<html>
 				<body>
 						<o1>
@@ -95,6 +95,8 @@
 			<xsl:variable name="name" select="./nom"> </xsl:variable>
 			<xsl:result-document href = "www/parcours/{$name}.html" >
 				<html>
+					<meta charset="UTF-8"/> <!-- Préférer à iso 8859-1 ?? caractères illisibles-->
+					<link rel="stylesheet" type="text/css" href="../../style.css" />
 					<body>
 						<h1> <xsl:value-of select="nom" /> </h1>
 						<h2> Les responsables du master sont : </h2>
@@ -107,11 +109,22 @@
 						<h2> Description du parcours : </h2>
 						<!-- Avoir recours à la substitution = créer template spéciale OU pleins de matchl? -->
 						<xsl:apply-templates select="description" />
+						<xsl:apply-templates select="listeDebouches" />
+
+
+
+						<xsl:for-each select="ref-semestre">
+						<xsl:call-template name="liste-ues-du-semestre">
+							<xsl:with-param name="refSemestre"><xsl:value-of select="@ref"/></xsl:with-param>
+						</xsl:call-template>
+						</xsl:for-each>
 					</body>
 				</html>
 			</xsl:result-document>
 		</xsl:for-each>
 	</xsl:template>
+
+	<!-- Templates match nécessaires pour la page de présentation du parcours -->
 
 	<xsl:template match="paragraphe">
 		<p> <xsl:value-of select="."/> </p>
@@ -138,6 +151,26 @@
 		<a href="{$url}"> <xsl:value-of select="."/> </a>
 	</xsl:template>
 
+	<xsl:template match="tab">
+		<table>
+		<xsl:for-each select="tabLine">
+			<tr>
+			<xsl:for-each select="tab-element">
+				<td> <xsl:value-of select="."/> </td>
+			</xsl:for-each>
+			</tr>
+		</xsl:for-each>
+		</table>
+	</xsl:template>
+
+	<xsl:template match="listeDebouches">
+		<h2> Liste des débouchés possibles : </h2>
+		<ul>
+			<xsl:for-each select="metier">
+				<li> <xsl:value-of select="."/> </li>
+			</xsl:for-each>
+		</ul>
+	</xsl:template>
 
 
 
