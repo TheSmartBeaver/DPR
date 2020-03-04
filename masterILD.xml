@@ -4,10 +4,10 @@
 
 <!DOCTYPE masterInformatique SYSTEM "masterILD.dtd">
 
-
-<masterInformatique
+<!-- <masterInformatique
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="masterILD.xsd">
+        xsi:noNamespaceSchemaLocation="masterILD.xsd"> -->
+<masterInformatique>
 
     <listeIntervenants>
         <intervenant id="Rem">
