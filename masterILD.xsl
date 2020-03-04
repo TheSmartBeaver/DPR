@@ -40,6 +40,7 @@
 
   	<xsl:template match="intervenant">
 		<xsl:variable name="name" select="./nom"> </xsl:variable>
+		<xsl:variable name="identif" select="@id"> </xsl:variable>
 		<li>
 			<xsl:value-of select="$name" />
 		</li>
@@ -52,6 +53,13 @@
 						<li> <xsl:value-of select="./mail" /> </li>
 						<li> <xsl:value-of select="./site" /> </li>
 					</o1>
+					<h3> Liens vers les UEs assurés par l'enseignant : </h3>
+					<ul>
+					<xsl:for-each select='/descendant::bloc/ue/refintervenant[@ref= $identif]/../nom'>
+						<xsl:variable name="ue" select="."> </xsl:variable>
+						<li> <a href="../UEs/{$ue}.html"> <xsl:value-of select="."/> </a> </li>
+					</xsl:for-each>
+					</ul>
 				</body>
 			</html>
 
