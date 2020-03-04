@@ -27,4 +27,6 @@ Schéma XML :
 XPATH 2.0
 -La comparaison renvoie vraie si il existe un couple qui valide la condition dans LA LISTE (comme XPATH 1.0).
 - java -cp saxon9he.jar net.sf.saxon.Query testXQuery.xql
+- interv/@id --> ue/refintervenant/@ref --> ue/../bloc/semestre/@id --> parcours/ref-semestre/@ref-J
 
+- JE SUIS UN MUTANT DISTINCT VALUES DANS XQUERY OKLM

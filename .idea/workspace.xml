@@ -3,23 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f42677f7-c058-43e5-93a0-86c194740d55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterILD.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterILD.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterILD.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memoSchema" beforeDir="false" afterPath="$PROJECT_DIR$/memoSchema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/ Cryptographie .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Cryptographie .html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/ Donnees P-R .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Donnees P-R .html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/ Interface Homme Machine .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Interface Homme Machine .html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/ Reseaux .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Reseaux .html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/ Sécurité des applications .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Sécurité des applications .html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/Big Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Big Data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/Génie Logiciel 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Génie Logiciel 2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/Programmation Objet Concurrente.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Programmation Objet Concurrente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/intervenants/Emmanuel Godard.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Emmanuel Godard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/intervenants/Jean Luc Massat.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Jean Luc Massat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/intervenants/Morin Remi.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Morin Remi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/intervenants/Noël Novelli.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Noël Novelli.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/parcours/ ILD Ingénierie du logiciel et des données .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/parcours/ ILD Ingénierie du logiciel et des données .html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testXQuery.xql" beforeDir="false" afterPath="$PROJECT_DIR$/testXQuery.xql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +39,15 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>

@@ -9,3 +9,6 @@ dtd:
 
 xsd:
 	xmllint --schema masterILD.xsd masterILD.xml --noout
+
+xq:
+	java -cp saxon9he.jar net.sf.saxon.Query testXQuery.xql -o:www/xq.html
