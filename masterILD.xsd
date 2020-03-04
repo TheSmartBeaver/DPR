@@ -83,8 +83,17 @@
 
     <xs:element name='mail'>
         <xs:complexType mixed='true'>
+            <xs:choice minOccurs='0' maxOccurs='unbounded'>
+                <xs:element ref='dom.amuHost'/>
+                <xs:element ref='dom.lislab'/>
+                <xs:element ref='dom.persoHost'/>
+            </xs:choice>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="dom.lislab" type="xs:ENTITY"/>
+    <xs:element name="dom.amuHost" type="xs:ENTITY"/>
+    <xs:element name="dom.persoHost" type="xs:ENTITY"/>
 
     <xs:element name='site'>
         <xs:complexType mixed='true'>

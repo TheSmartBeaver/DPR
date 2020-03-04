@@ -23,3 +23,8 @@ Schéma XML :
 -faire lien partout ? intervenant dans ue vers sa fiche
 -faire une page index.html --- accueil point d'entrée
 -commande makeFile xsd -> prob avec entites param
+
+XPATH 2.0
+-La comparaison renvoie vraie si il existe un couple qui valide la condition dans LA LISTE (comme XPATH 1.0).
+- java -cp saxon9he.jar net.sf.saxon.Query testXQuery.xql
+

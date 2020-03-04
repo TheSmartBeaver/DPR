@@ -4,6 +4,9 @@
     <list default="true" id="f42677f7-c058-43e5-93a0-86c194740d55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masterILD.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memoSchema" beforeDir="false" afterPath="$PROJECT_DIR$/memoSchema" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/ Cryptographie .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Cryptographie .html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/ Donnees P-R .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Donnees P-R .html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/ Interface Homme Machine .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/ Interface Homme Machine .html" afterDir="false" />
@@ -12,9 +15,12 @@
       <change beforePath="$PROJECT_DIR$/www/UEs/Big Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Big Data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/Génie Logiciel 2.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Génie Logiciel 2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/Programmation Objet Concurrente.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Programmation Objet Concurrente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/intervenants/Emmanuel Godard.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Emmanuel Godard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/intervenants/Jean Luc Massat.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Jean Luc Massat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/intervenants/Morin Remi.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Morin Remi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/intervenants/Noël Novelli.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Noël Novelli.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/parcours/ ILD Ingénierie du logiciel et des données .html" beforeDir="false" afterPath="$PROJECT_DIR$/www/parcours/ ILD Ingénierie du logiciel et des données .html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +30,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YZ2Ttbumd8XzFHEUYVmuP0QgT2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -41,15 +53,15 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -65,6 +77,7 @@
       <updated>1583135806736</updated>
       <workItem from="1583135808508" duration="9436000" />
       <workItem from="1583210069183" duration="20979000" />
+      <workItem from="1583320560408" duration="2914000" />
     </task>
     <servers />
   </component>
@@ -76,7 +89,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -87,17 +102,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="xslt">
           <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>56</line>
+          <line>68</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="xslt">
           <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>57</line>
+          <line>69</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="xslt">
           <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>123</line>
+          <line>168</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
