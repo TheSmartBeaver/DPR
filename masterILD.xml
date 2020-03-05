@@ -12,29 +12,29 @@
         <intervenant id="Rem">
             <identifiant>Rem</identifiant>
             <nom>Morin Remi</nom>
-            <mail> remiMorin&dom.lislab; </mail>
-            <site> remiMorin&dom.persoHost; </site>
+            <mail> remiMorin@lis-lab.fr </mail>
+            <site> remiMorin.perso.luminy@univ-amu.fr </site>
         </intervenant>
 
         <intervenant id="JL">
             <identifiant>Jean_Luc</identifiant>
             <nom>Jean Luc Massat</nom>
-            <mail> jeanLucMassat&dom.lislab; </mail>
-            <site> jeanLucMassat&dom.persoHost; </site>
+            <mail> jeanLucMassat@lis-lab.fr </mail>
+            <site> jeanLucMassat.perso.luminy@univ-amu.fr </site>
             </intervenant >
 
         <intervenant id="EG">
             <identifiant>"Emm_G"</identifiant>
             <nom>Emmanuel Godard</nom>
-            <mail> emmanuelGodard&dom.lislab; </mail>
-            <site> emmanuelGodard&dom.persoHost; </site>
+            <mail> emmanuelGodard@lis-lab.fr </mail>
+            <site> emmanuelGodard.perso.luminy@univ-amu.fr </site>
         </intervenant>
 
         <intervenant id="Nono">
             <identifiant>Noel_No</identifiant>
             <nom>Noël Novelli</nom>
-            <mail> noelNovelli&dom.lislab; </mail>
-            <site> noelNovelli&dom.persoHost; </site>
+            <mail> noelNovelli@lis-lab.fr </mail>
+            <site> noelNovelli.perso.luminy@univ-amu.fr </site>
         </intervenant>
 
 

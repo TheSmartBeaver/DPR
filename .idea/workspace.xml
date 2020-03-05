@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f42677f7-c058-43e5-93a0-86c194740d55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memoSchema" beforeDir="false" afterPath="$PROJECT_DIR$/memoSchema" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testXQuery.xql" beforeDir="false" afterPath="$PROJECT_DIR$/testXQuery.xql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xsd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

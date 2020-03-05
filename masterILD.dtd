@@ -19,7 +19,7 @@
 
 <!-- Des entités internes permettant de générer adresses -->
 <!ENTITY    dom.lislab    "@lis-lab.fr" >
-<!ENTITY    dom.amuHost      ".univ-amu.fr" >
+<!ENTITY    dom.amuHost      "@univ-amu.fr" >
 <!ENTITY    dom.persoHost     "perso.luminy&dom.amuHost;" >
 
 <!--Possibilité d'ajouté une difficulté en attribut de "ue" -->

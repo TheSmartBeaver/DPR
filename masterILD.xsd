@@ -74,20 +74,10 @@
             <xs:sequence>
                 <xs:element ref='identifiant'/>
                 <xs:element ref='nom'/>
-                <xs:element ref='mail'/>
-                <xs:element ref='site'/>
+                <xs:element name="mail" type="xs:string"/>
+                <xs:element name="site" type="xs:string"/>
             </xs:sequence>
             <xs:attribute name='id' type='xs:ID' use='optional'/>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name='mail'>
-        <xs:complexType mixed='true'>
-            <xs:choice minOccurs='0' maxOccurs='unbounded'>
-                <xs:element ref='dom.amuHost'/>
-                <xs:element ref='dom.lislab'/>
-                <xs:element ref='dom.persoHost'/>
-            </xs:choice>
         </xs:complexType>
     </xs:element>
 
