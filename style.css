@@ -2,6 +2,8 @@ html {
   font-family: sans-serif;
 }
 
+/*Pour tableau*/
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200,200,200);
@@ -26,3 +28,20 @@ tr:nth-child(odd) td {
   background-color: rgb(245,245,245);
 }
 
+/*Pour menu*/
+
+#menu li {
+  display: inline;
+}
+
+#menu li {
+  display: inline ;
+  margin-right: 1px ;
+  color: #fff ;
+  background: #c00 ;
+}
+
+#menu li a:hover, #navigation li a:focus, #navigation li a:active {
+  background: #900 ;
+  text-decoration: underline ;
+}
