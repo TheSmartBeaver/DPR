@@ -23,6 +23,16 @@
         <html>
             <body>
                 <xsl:call-template name="menuStatique"/>
+
+                <ol>
+                <xsl:for-each select="/parcours">
+                    <xsl:variable name="parcoursName" select="./nom"/>
+                    <li><a href="../parcours/{$parcoursName}.html">
+                        <xsl:value-of select="$parcoursName"/>
+                    </a></li>
+                </xsl:for-each>
+                </ol>
+
                 <xsl:call-template name="liste-des-enseignants"/>
                 <xsl:call-template name="liste-des-unites"/>
                 <xsl:call-template name="liste-des-parcours"/>

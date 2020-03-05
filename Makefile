@@ -14,3 +14,5 @@ xsd:
 
 xq:
 	java -cp saxon9he.jar net.sf.saxon.Query testXQuery.xql -o:www/xq.html
+
+all: dtd xsd web tidy xq
