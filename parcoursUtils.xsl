@@ -50,11 +50,11 @@
 
     <xsl:template name="menuStatique">
         <h1> Menu </h1>
-        <ol>
+        <ul id="menu">
             <li><a href="../Accueil/accueil.html"> Accueil </a></li>
             <li><a href="../UEs/liste_UEs.html"> liste des UEs </a></li>
             <li><a href="../intervenants/liste_Intervenants.html"> liste des intervenants </a></li>
-        </ol>
+        </ul>
     </xsl:template>
 
     <!-- Cette template prendra un paramètre : la ref du semestre-->

@@ -37,15 +37,15 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -62,6 +62,7 @@
       <workItem from="1583135808508" duration="9436000" />
       <workItem from="1583210069183" duration="20979000" />
       <workItem from="1583320560408" duration="2914000" />
+      <workItem from="1583424218509" duration="2868000" />
     </task>
     <servers />
   </component>
@@ -80,6 +81,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="456" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1583424234435">
+      <screen x="0" y="28" width="1600" height="844" />
+    </state>
+    <state x="456" y="278" key="com.intellij.ide.util.TipDialog/0.28.1600.844@0.28.1600.844" timestamp="1583424234434" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

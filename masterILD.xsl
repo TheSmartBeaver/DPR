@@ -44,9 +44,9 @@
 
     <xsl:template name="liste-des-enseignants">
         <h1>Liste intervenant</h1>
-        <o1>
+        <ol>
             <xsl:apply-templates select="//listeIntervenants"/>
-        </o1>
+        </ol>
     </xsl:template>
 
     <!--Permet de retrouver UE facilement à partir ID des enseignants-->
@@ -64,7 +64,7 @@
                 <meta charset="iso-8859-1"/>
                 <body>
                     <xsl:call-template name="menuStatique"/>
-                    <o1>
+                    <ol>
                         <li>
                             <h2>
                                 <xsl:value-of select="$name"/>
@@ -76,7 +76,7 @@
                         <li>
                             <xsl:value-of select="./site"/>
                         </li>
-                    </o1>
+                    </ol>
                     <h3>Liens vers les UEs assurés par l'enseignant :</h3>
                     <ul>
                         <!-- Utilisation d'un xsl:key -->
@@ -96,6 +96,8 @@
 
     </xsl:template>
 
+    <xsl:key name="getNameDeEnseignant" match="intervenant" use="@id"/>
+
     <xsl:template name="liste-des-unites">
         <!-- nom, identifiant, nbcredit, resume?, plan?, lieu?, refintervenant -->
 
@@ -107,23 +109,40 @@
                 <html>
                     <body>
                         <xsl:call-template name="menuStatique"/>
-                        <o1>
+                        <ol>
                             <li>
-                                <xsl:value-of select="nom"/>
+                                <h4>nom:</h4><xsl:value-of select="nom"/>
                             </li>
                             <li>
-                                <xsl:value-of select="identifiant"/>
+                                <h4>nombre de crédit:</h4><xsl:value-of select="nbcredit"/>
                             </li>
+
+                            <!-- Ces champs étant facultatifs, il faut des conditions -->
+                            <xsl:variable name="lieu" select="lieu"/>
+                            <xsl:choose>
+                                <xsl:when test="$lieu!=''"><li>
+                                    <h4>lieu:</h4><xsl:value-of select="$lieu"/>
+                                </li></xsl:when>
+                            </xsl:choose>
+
+                            <xsl:variable name="plan" select="plan"/>
+                            <xsl:choose>
+                                <xsl:when test="$plan!=''"><li>
+                                    <h4>plan:</h4><xsl:value-of select="plan"/>
+                                </li></xsl:when>
+                            </xsl:choose>
+
+                            <xsl:variable name="resume" select="resume"/>
+                            <xsl:choose>
+                                <xsl:when test="$resume!=''"><li>
+                                    <h4>Description:</h4><xsl:value-of select="resume"/>
+                                </li></xsl:when>
+                            </xsl:choose>
+                            <xsl:variable name="refEnseignant" select="refintervenant"/>
                             <li>
-                                <xsl:value-of select="nbcredit"/>
+                                <h4>Enseignant:</h4><xsl:value-of select="key('getNameDeEnseignant',$refEnseignant/@ref)/nom"/>
                             </li>
-                            <li>
-                                <xsl:value-of select="lieu"/>
-                            </li>
-                            <li>
-                                <xsl:value-of select="refintervenant"/>
-                            </li>
-                        </o1>
+                        </ol>
 
                         <h2>Liste des parcours contenant cette UE :</h2>
                         <xsl:variable name="idSemestre" select="ancestor::semestre/@id"/>
