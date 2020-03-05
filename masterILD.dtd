@@ -9,7 +9,7 @@
 <!ELEMENT   nom  	        (#PCDATA)>
 <!ELEMENT   identifiant     (#PCDATA)>
 <!ELEMENT   nbcredit 	    (#PCDATA)>
-<!ELEMENT   resume  	    (#PCDATA)>
+<!ELEMENT   resume  	    (description)>
 <!ELEMENT   plan  	        (#PCDATA)>
 <!ELEMENT   lieu  	        (#PCDATA)>
 

@@ -13,16 +13,19 @@
         <xsl:result-document href="www/intervenants/liste_Intervenants.html">
             <html>
                 <meta charset="UTF-8"/>
+                <link rel="stylesheet" type="text/css" href="../../style.css"/>
                 <body>
                     <xsl:call-template name="menuStatique"/>
                     <h1>Liste des intervenants du master Info</h1>
                     <ol>
-                    <xsl:for-each select="//listeIntervenants/intervenant">
-                        <xsl:variable name="name" select="./nom"></xsl:variable>
-                        <li>
-                            <a href="../intervenants/{$name}.html"> <xsl:value-of select="$name"/> </a>
-                        </li>
-                    </xsl:for-each>
+                        <xsl:for-each select="//listeIntervenants/intervenant">
+                            <xsl:variable name="name" select="./nom"></xsl:variable>
+                            <li>
+                                <a href="../intervenants/{$name}.html">
+                                    <xsl:value-of select="$name"/>
+                                </a>
+                            </li>
+                        </xsl:for-each>
                     </ol>
                 </body>
             </html>
@@ -31,6 +34,7 @@
         <xsl:result-document href="www/UEs/liste_UEs.html">
             <html>
                 <meta charset="UTF-8"/>
+                <link rel="stylesheet" type="text/css" href="../../style.css"/>
                 <body>
                     <xsl:call-template name="menuStatique"/>
                     <h1>Liste des UEs du master Info</h1>
@@ -38,7 +42,9 @@
                         <xsl:for-each select="//descendant::ue">
                             <xsl:variable name="name" select="./nom"></xsl:variable>
                             <li>
-                                <a href="../UEs/{$name}.html"> <xsl:value-of select="$name"/> </a>
+                                <a href="../UEs/{$name}.html">
+                                    <xsl:value-of select="$name"/>
+                                </a>
                             </li>
                         </xsl:for-each>
                     </ol>
@@ -49,23 +55,35 @@
     </xsl:template>
 
     <xsl:template name="menuStatique">
-        <h1> Menu </h1>
+        <h1>Menu</h1>
         <ul id="menu">
-            <li><a href="../Accueil/accueil.html"> Accueil </a></li>
-            <li><a href="../UEs/liste_UEs.html"> liste des UEs </a></li>
-            <li><a href="../intervenants/liste_Intervenants.html"> liste des intervenants </a></li>
+            <li>
+                <a href="../Accueil/accueil.html">Accueil</a>
+            </li>
+            <li>
+                <a href="../UEs/liste_UEs.html">liste des UEs</a>
+            </li>
+            <li>
+                <a href="../intervenants/liste_Intervenants.html">liste des intervenants</a>
+            </li>
         </ul>
     </xsl:template>
 
     <!-- Cette template prendra un paramètre : la ref du semestre-->
     <xsl:template name="liste-ues-du-semestre">
         <xsl:param name="refSemestre"/>
-        <h3>Semestre : <xsl:value-of select="/descendant::semestre[@id=$refSemestre]/@id"/> </h3>
+        <h3>Semestre :
+            <xsl:value-of select="/descendant::semestre[@id=$refSemestre]/@id"/>
+        </h3>
         <ol>
-        <xsl:for-each select="/descendant::semestre[@id=$refSemestre]/bloc/ue">
-        <xsl:variable name="ueName" select="nom"/>
-        <li> <a href="../UEs/{$ueName}.html"> <xsl:value-of select="$ueName"/> </a> </li>
-        </xsl:for-each>
+            <xsl:for-each select="/descendant::semestre[@id=$refSemestre]/bloc/ue">
+                <xsl:variable name="ueName" select="nom"/>
+                <li>
+                    <a href="../UEs/{$ueName}.html">
+                        <xsl:value-of select="$ueName"/>
+                    </a>
+                </li>
+            </xsl:for-each>
         </ol>
 
     </xsl:template>

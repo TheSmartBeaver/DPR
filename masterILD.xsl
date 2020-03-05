@@ -19,18 +19,21 @@
             method="html"/>
 
     <xsl:template match="/">
-        <meta charset="iso-8859-1"/>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="../../style.css"/>
         <html>
             <body>
                 <xsl:call-template name="menuStatique"/>
-
+                <h2>Les parcours proposés pour le M1 Informatique :</h2>
                 <ol>
-                <xsl:for-each select="/parcours">
-                    <xsl:variable name="parcoursName" select="./nom"/>
-                    <li><a href="../parcours/{$parcoursName}.html">
-                        <xsl:value-of select="$parcoursName"/>
-                    </a></li>
-                </xsl:for-each>
+                    <xsl:for-each select="//parcours">
+                        <xsl:variable name="parcoursName" select="./nom"/>
+                        <li>
+                            <a href="../parcours/{$parcoursName}.html">
+                                <xsl:value-of select="$parcoursName"/>
+                            </a>
+                        </li>
+                    </xsl:for-each>
                 </ol>
 
                 <xsl:call-template name="liste-des-enseignants"/>
@@ -43,10 +46,7 @@
     </xsl:template>
 
     <xsl:template name="liste-des-enseignants">
-        <h1>Liste intervenant</h1>
-        <ol>
-            <xsl:apply-templates select="//listeIntervenants"/>
-        </ol>
+        <xsl:apply-templates select="//listeIntervenants"/>
     </xsl:template>
 
     <!--Permet de retrouver UE facilement à partir ID des enseignants-->
@@ -55,28 +55,26 @@
     <xsl:template match="intervenant">
         <xsl:variable name="name" select="./nom"></xsl:variable>
         <xsl:variable name="identif" select="@id"></xsl:variable>
-        <li>
-            <xsl:value-of select="$name"/>
-        </li>
 
         <xsl:result-document href="www/intervenants/{$name}.html">
             <html>
-                <meta charset="iso-8859-1"/>
+                <meta charset="UTF-8"/>
+                <link rel="stylesheet" type="text/css" href="../../style.css"/>
                 <body>
                     <xsl:call-template name="menuStatique"/>
-                    <ol>
+                    <ul>
                         <li>
                             <h2>
                                 <xsl:value-of select="$name"/>
                             </h2>
                         </li>
                         <li>
-                            <xsl:value-of select="./mail"/>
+                            mail : <xsl:value-of select="./mail"/>
                         </li>
                         <li>
-                            <xsl:value-of select="./site"/>
+                            site perso : <xsl:value-of select="./site"/>
                         </li>
-                    </ol>
+                    </ul>
                     <h3>Liens vers les UEs assurés par l'enseignant :</h3>
                     <ul>
                         <!-- Utilisation d'un xsl:key -->
@@ -101,48 +99,60 @@
     <xsl:template name="liste-des-unites">
         <!-- nom, identifiant, nbcredit, resume?, plan?, lieu?, refintervenant -->
 
-        <h1>Liste des ues</h1>
         <xsl:for-each select="/descendant::ue">
             <xsl:variable name="name" select="./nom"></xsl:variable>
             <xsl:result-document href="www/UEs/{$name}.html">
-                <meta charset="iso-8859-1"/>
                 <html>
+                    <meta charset="UTF-8"/>
+                    <link rel="stylesheet" type="text/css" href="../../style.css"/>
                     <body>
                         <xsl:call-template name="menuStatique"/>
-                        <ol>
+                        <ul>
                             <li>
-                                <h4>nom:</h4><xsl:value-of select="nom"/>
+                                <h4>nom:</h4>
+                                <xsl:value-of select="nom"/>
                             </li>
                             <li>
-                                <h4>nombre de crédit:</h4><xsl:value-of select="nbcredit"/>
+                                <h4>nombre de crédit:</h4>
+                                <xsl:value-of select="nbcredit"/>
                             </li>
 
                             <!-- Ces champs étant facultatifs, il faut des conditions -->
                             <xsl:variable name="lieu" select="lieu"/>
                             <xsl:choose>
-                                <xsl:when test="$lieu!=''"><li>
-                                    <h4>lieu:</h4><xsl:value-of select="$lieu"/>
-                                </li></xsl:when>
+                                <xsl:when test="$lieu!=''">
+                                    <li>
+                                        <h4>lieu:</h4>
+                                        <xsl:value-of select="$lieu"/>
+                                    </li>
+                                </xsl:when>
                             </xsl:choose>
 
                             <xsl:variable name="plan" select="plan"/>
                             <xsl:choose>
-                                <xsl:when test="$plan!=''"><li>
-                                    <h4>plan:</h4><xsl:value-of select="plan"/>
-                                </li></xsl:when>
+                                <xsl:when test="$plan!=''">
+                                    <li>
+                                        <h4>plan:</h4>
+                                        <xsl:value-of select="plan"/>
+                                    </li>
+                                </xsl:when>
                             </xsl:choose>
 
                             <xsl:variable name="resume" select="resume"/>
                             <xsl:choose>
-                                <xsl:when test="$resume!=''"><li>
-                                    <h4>Description:</h4><xsl:value-of select="resume"/>
-                                </li></xsl:when>
+                                <xsl:when test="$resume!=''">
+                                    <li>
+                                        <h4>Description:</h4>
+                                        <xsl:apply-templates select="resume"/>
+                                    </li>
+                                </xsl:when>
                             </xsl:choose>
                             <xsl:variable name="refEnseignant" select="refintervenant"/>
                             <li>
-                                <h4>Enseignant:</h4><xsl:value-of select="key('getNameDeEnseignant',$refEnseignant/@ref)/nom"/>
+                                <h4>Enseignant:</h4>
+                                <xsl:value-of select="key('getNameDeEnseignant',$refEnseignant/@ref)/nom"/>
                             </li>
-                        </ol>
+                        </ul>
 
                         <h2>Liste des parcours contenant cette UE :</h2>
                         <xsl:variable name="idSemestre" select="ancestor::semestre/@id"/>
@@ -187,8 +197,7 @@
 
                         <h2>Description du parcours :</h2>
                         <!-- Avoir recours à la substitution = créer template spéciale OU pleins de match? -->
-                        <xsl:apply-templates select="description"/>
-                        <xsl:apply-templates select="listeDebouches"/>
+                        <xsl:apply-templates/>
 
 
                         <xsl:for-each select="ref-semestre">
@@ -208,7 +217,7 @@
 
     <xsl:template match="paragraphe">
         <p>
-            <xsl:value-of select="."/>
+            <xsl:apply-templates/>
         </p>
     </xsl:template>
 
