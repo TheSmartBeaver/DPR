@@ -9,6 +9,7 @@
                 return(<li>{$ue/nom}</li>)
         } </ol>,
         <ul> {distinct-values(for $refSemestre in doc("masterILD.xml")//descendant::ue[refintervenant/@ref=data($interv/@id)]/../../@id
+                               order by $refSemestre/nom descending
                                return(<li>{doc("masterILD.xml")//parcours[ref-semestre/@ref=data($refSemestre)]/nom}</li>)
         )} </ul>
 )} </ol> </body>

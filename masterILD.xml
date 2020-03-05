@@ -81,7 +81,7 @@
     <semestre id="S1">
         <bloc>
             <ue >
-                <nom> Reseaux </nom>
+                <nom>Reseaux</nom>
                 <identifiant> Res </identifiant>
                 <nbcredit>4</nbcredit>
                 <lieu> Luminy;St-Jerôme;St-Charles</lieu>
@@ -102,13 +102,13 @@
     <semestre id="S2">
         <bloc>
             <ue >
-                <nom> Donnees P-R </nom>
+                <nom>Donnees P-R</nom>
                 <identifiant> m1dPr </identifiant>
                 <nbcredit>3</nbcredit>
                 <refintervenant ref="JL"/>
             </ue>
             <ue >
-                <nom> Sécurité des applications </nom>
+                <nom>Sécurité des applications</nom>
                 <identifiant> m1Secur </identifiant>
                 <nbcredit>6</nbcredit>
                 <refintervenant ref="JL"/>
@@ -117,13 +117,13 @@
         </bloc>
         <bloc>
             <ue>
-                <nom> Cryptographie </nom>
+                <nom>Cryptographie</nom>
                 <identifiant> m1Cryp </identifiant>
                 <nbcredit>3</nbcredit>
                 <refintervenant ref="Rem"/>
             </ue>
             <ue >
-                <nom> Interface Homme Machine </nom>
+                <nom>Interface Homme Machine</nom>
                 <identifiant> IHM </identifiant>
                 <nbcredit>3</nbcredit>
                 <refintervenant ref="Nono"/>

@@ -1,4 +1,5 @@
 web: 
+	rm -rf www	
 	mkdir -p www/Accueil
 	java -jar saxon9he.jar -xsl:masterILD.xsl masterILD.xml > www/Accueil/accueil.html
 
