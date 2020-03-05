@@ -4,10 +4,11 @@
 
 <!DOCTYPE masterInformatique SYSTEM "masterILD.dtd">
 
-<masterInformatique
+<!--<masterInformatique
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="masterILD.xsd">
+        xsi:noNamespaceSchemaLocation="masterILD.xsd"> -->
 
+<masterInformatique>
     <listeIntervenants>
         <intervenant id="Rem">
             <identifiant>Rem</identifiant>
@@ -82,7 +83,7 @@
             <ue >
                 <nom> Reseaux </nom>
                 <identifiant> Res </identifiant>
-                <nbcredit> 4 </nbcredit>
+                <nbcredit>4</nbcredit>
                 <lieu> Luminy;St-Jerôme;St-Charles</lieu>
                 <refintervenant ref="EG"/>
             </ue>
@@ -90,7 +91,7 @@
             <ue >
                 <nom>Programmation Objet Concurrente</nom>
                 <identifiant> POC </identifiant>
-                <nbcredit> 3 </nbcredit>
+                <nbcredit>3</nbcredit>
                 <lieu> Luminy;St-Jerôme;St-Charles</lieu>
                 <refintervenant ref="Rem"/>
             </ue>
@@ -103,13 +104,13 @@
             <ue >
                 <nom> Donnees P-R </nom>
                 <identifiant> m1dPr </identifiant>
-                <nbcredit> 3 </nbcredit>
+                <nbcredit>3</nbcredit>
                 <refintervenant ref="JL"/>
             </ue>
             <ue >
                 <nom> Sécurité des applications </nom>
                 <identifiant> m1Secur </identifiant>
-                <nbcredit> 6 </nbcredit>
+                <nbcredit>6</nbcredit>
                 <refintervenant ref="JL"/>
             </ue>
             <role> UE obligatoires pour le parcours ILD </role>
@@ -118,13 +119,13 @@
             <ue>
                 <nom> Cryptographie </nom>
                 <identifiant> m1Cryp </identifiant>
-                <nbcredit> 3 </nbcredit>
+                <nbcredit>3</nbcredit>
                 <refintervenant ref="Rem"/>
             </ue>
             <ue >
                 <nom> Interface Homme Machine </nom>
                 <identifiant> IHM </identifiant>
-                <nbcredit> 3 </nbcredit>
+                <nbcredit>3</nbcredit>
                 <refintervenant ref="Nono"/>
             </ue>
 

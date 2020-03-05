@@ -12,7 +12,7 @@ Schéma XML :
 - Contenu libre (xs:any)
 
 - extension de type ??
-- absence de valeur -> nil
+- absence de valeur -> nil AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH présence ou pas de résumé 
 
 - Clef et référence
 
@@ -30,3 +30,8 @@ XPATH 2.0
 - interv/@id --> ue/refintervenant/@ref --> ue/../bloc/semestre/@id --> parcours/ref-semestre/@ref-J
 
 - JE SUIS UN MUTANT DISTINCT VALUES DANS XQUERY OKLM
+
+SCHEEEE
+-Un élément simple est un élément qui ne contient qu'une valeur dont le type est dit simple. Il ne contient pas d'autres éléments.
+-Un élément simple peut donc être une balise qui ne contient aucun attribut et dans laquelle aucune autre balise n'est imbriquée. Un attribut d'une balise peut également être considéré comme un élément simple
+

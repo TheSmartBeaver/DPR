@@ -34,15 +34,9 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='nom'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='nom' type="xs:string"/>
 
-    <xs:element name='identifiant'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='identifiant' type="xs:string"/>
 
     <xs:element name='nbcredit'>
         <xs:simpleType>
@@ -69,8 +63,9 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='intervenant'>
-        <xs:complexType>
+    <xs:element name='intervenant' type="intervenant"/>
+
+        <xs:complexType name="intervenant">
             <xs:sequence>
                 <xs:element ref='identifiant'/>
                 <xs:element ref='nom'/>
@@ -79,16 +74,21 @@
             </xs:sequence>
             <xs:attribute name='id' type='xs:ID' use='optional'/>
         </xs:complexType>
-    </xs:element>
+
+    <!-- type personne héritant de intervenant -->
+    <xs:complexType name="personne">
+        <xs:complexContent>
+            <xs:extension base="intervenant">
+                <xs:sequence>
+                    <xs:element name="adresse" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:element name="dom.lislab" type="xs:ENTITY"/>
     <xs:element name="dom.amuHost" type="xs:ENTITY"/>
     <xs:element name="dom.persoHost" type="xs:ENTITY"/>
-
-    <xs:element name='site'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
 
     <xs:element name='listeIntervenants'>
         <xs:complexType>
@@ -124,10 +124,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='responsable'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='responsable' type="xs:string"/>
 
     <xs:element name='listeDebouches'>
         <xs:complexType>
@@ -137,10 +134,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='metier'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='metier' type="xs:string"/>
 
     <xs:element name='semestre'>
         <xs:complexType>
@@ -160,10 +154,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='role'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='role' type="xs:string"/>
 
     <xs:element name='ref-semestre'>
         <xs:complexType>
@@ -207,20 +198,11 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='gras'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='gras' type="xs:string"/>
 
-    <xs:element name='italique'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='italique' type="xs:string"/>
 
-    <xs:element name='link'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='link' type="xs:string"/>
 
     <xs:element name='tabLine'>
         <xs:complexType>
@@ -230,8 +212,5 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name='tab-element'>
-        <xs:complexType mixed='true'>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name='tab-element' type="xs:string"/>
 </xs:schema>

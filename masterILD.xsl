@@ -22,12 +22,11 @@
         <meta charset="iso-8859-1"/>
         <html>
             <body>
+                <xsl:call-template name="menuStatique"/>
                 <xsl:call-template name="liste-des-enseignants"/>
                 <xsl:call-template name="liste-des-unites"/>
                 <xsl:call-template name="liste-des-parcours"/>
-
-                <a href="masterILD.html#Rem">Lien vers Remi Morin</a>
-                <a href="masterILD.html#JL">Lien vers Jean-Luc Massat</a>
+                <xsl:call-template name="listesUesEtEnseignants"/>
             </body>
         </html>
 
@@ -40,6 +39,9 @@
         </o1>
     </xsl:template>
 
+    <!--Permet de retrouver UE facilement à partir ID des enseignants-->
+    <xsl:key name="getUeDeEnseignant" match="ue" use="refintervenant/@ref"/>
+
     <xsl:template match="intervenant">
         <xsl:variable name="name" select="./nom"></xsl:variable>
         <xsl:variable name="identif" select="@id"></xsl:variable>
@@ -51,6 +53,7 @@
             <html>
                 <meta charset="iso-8859-1"/>
                 <body>
+                    <xsl:call-template name="menuStatique"/>
                     <o1>
                         <li>
                             <h2>
@@ -66,11 +69,12 @@
                     </o1>
                     <h3>Liens vers les UEs assurés par l'enseignant :</h3>
                     <ul>
-                        <xsl:for-each select='/descendant::bloc/ue/refintervenant[@ref= $identif]/../nom'>
-                            <xsl:variable name="ue" select="."></xsl:variable>
+                        <!-- Utilisation d'un xsl:key -->
+                        <xsl:for-each select="key('getUeDeEnseignant',$identif)">
+                            <xsl:variable name="ue" select="./nom"></xsl:variable>
                             <li>
                                 <a href="../UEs/{$ue}.html">
-                                    <xsl:value-of select="."/>
+                                    <xsl:value-of select="$ue"/>
                                 </a>
                             </li>
                         </xsl:for-each>
@@ -92,6 +96,7 @@
                 <meta charset="iso-8859-1"/>
                 <html>
                     <body>
+                        <xsl:call-template name="menuStatique"/>
                         <o1>
                             <li>
                                 <xsl:value-of select="nom"/>
@@ -138,6 +143,7 @@
                     <meta charset="UTF-8"/> <!-- Préférer à iso 8859-1 ?? caractères illisibles-->
                     <link rel="stylesheet" type="text/css" href="../../style.css"/>
                     <body>
+                        <xsl:call-template name="menuStatique"/>
                         <h1>
                             <xsl:value-of select="nom"/>
                         </h1>
@@ -151,7 +157,7 @@
                         </ol>
 
                         <h2>Description du parcours :</h2>
-                        <!-- Avoir recours à la substitution = créer template spéciale OU pleins de matchl? -->
+                        <!-- Avoir recours à la substitution = créer template spéciale OU pleins de match? -->
                         <xsl:apply-templates select="description"/>
                         <xsl:apply-templates select="listeDebouches"/>
 
@@ -232,7 +238,6 @@
             </xsl:for-each>
         </ul>
     </xsl:template>
-
 
 </xsl:stylesheet>
 

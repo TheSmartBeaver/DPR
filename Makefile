@@ -1,5 +1,6 @@
 web: 
-	java -jar saxon9he.jar -xsl:masterILD.xsl masterILD.xml
+	mkdir -p www/Accueil
+	java -jar saxon9he.jar -xsl:masterILD.xsl masterILD.xml > www/Accueil/accueil.html
 
 tidy:
 	tidy -im -asxhtml -indent BLABLABLA
