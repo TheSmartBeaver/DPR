@@ -11,9 +11,12 @@
     <xsl:template name="listesUesEtEnseignants">
 
         <xsl:result-document href="www/intervenants/liste_Intervenants.html">
-            <html>
-                <meta charset="UTF-8"/>
-                <link rel="stylesheet" type="text/css" href="../../style.css"/>
+            <html xmlns="http://www.w3.org/1999/xhtml" >
+                <head>
+                    <meta charset="UTF-8"/>
+                    <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                    <title>liste Intervenants</title>
+                </head>
                 <body>
                     <xsl:call-template name="menuStatique"/>
                     <h1>Liste des intervenants du master Info</h1>
@@ -32,9 +35,12 @@
         </xsl:result-document>
 
         <xsl:result-document href="www/UEs/liste_UEs.html">
-            <html>
-                <meta charset="UTF-8"/>
-                <link rel="stylesheet" type="text/css" href="../../style.css"/>
+            <html xmlns="http://www.w3.org/1999/xhtml" >
+                <head>
+                    <meta charset="UTF-8"/>
+                    <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                    <title>liste UEs</title>
+                </head>
                 <body>
                     <xsl:call-template name="menuStatique"/>
                     <h1>Liste des UEs du master Info</h1>
@@ -69,15 +75,17 @@
         </ul>
     </xsl:template>
 
+
     <!-- Cette template prendra un paramètre : la ref du semestre-->
     <xsl:template name="liste-ues-du-semestre">
         <xsl:param name="refSemestre"/>
-        <h3>Semestre :
+        <h3>Semestrep :
             <xsl:value-of select="/descendant::semestre[@id=$refSemestre]/@id"/>
         </h3>
         <ol>
-            <xsl:for-each select="/descendant::semestre[@id=$refSemestre]/bloc/ue">
-                <xsl:variable name="ueName" select="nom"/>
+            <xsl:for-each select="/descendant::semestre[@id=$refSemestre]/bloc/ref-ue">
+                <xsl:variable name="refUE" select="@ref"/>
+                <xsl:variable name="ueName" select="//listeUE/ue[@id=$refUE]/nom"/>
                 <li>
                     <a href="../UEs/{$ueName}.html">
                         <xsl:value-of select="$ueName"/>

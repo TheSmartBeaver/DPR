@@ -20,9 +20,12 @@
             method="html"/>
 
     <xsl:template match="/">
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" type="text/css" href="../../style.css"/>
-        <html>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <meta charset="UTF-8"/>
+                <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                <title>Bienvenue au Département d'Informatique</title>
+            </head>
             <body>
                 <xsl:call-template name="menuStatique"/>
                 <h2>Les parcours proposés pour le M1 Informatique :</h2>
@@ -58,9 +61,12 @@
         <xsl:variable name="identif" select="@id"></xsl:variable>
 
         <xsl:result-document href="www/intervenants/{$name}.html">
-            <html>
-                <meta charset="UTF-8"/>
-                <link rel="stylesheet" type="text/css" href="../../style.css"/>
+            <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                    <meta charset="UTF-8"/>
+                    <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                    <title>{$name}</title>
+                </head>
                 <body>
                     <xsl:call-template name="menuStatique"/>
                     <ul>
@@ -70,10 +76,12 @@
                             </h2>
                         </li>
                         <li>
-                            mail : <xsl:value-of select="./mail"/>
+                            mail :
+                            <xsl:value-of select="./mail"/>
                         </li>
                         <li>
-                            site perso : <xsl:value-of select="./site"/>
+                            site perso :
+                            <xsl:value-of select="./site"/>
                         </li>
                     </ul>
                     <h3>Liens vers les UEs assurés par l'enseignant :</h3>
@@ -102,10 +110,14 @@
 
         <xsl:for-each select="/descendant::ue">
             <xsl:variable name="name" select="./nom"></xsl:variable>
+            <xsl:variable name="UE" select="."></xsl:variable>
             <xsl:result-document href="www/UEs/{$name}.html">
-                <html>
-                    <meta charset="UTF-8"/>
-                    <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                    <head>
+                        <meta charset="UTF-8"/>
+                        <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                        <title>{$name}</title>
+                    </head>
                     <body>
                         <xsl:call-template name="menuStatique"/>
                         <ul>
@@ -156,16 +168,18 @@
                         </ul>
 
                         <h2>Liste des parcours contenant cette UE :</h2>
-                        <xsl:variable name="idSemestre" select="ancestor::semestre/@id"/>
+                        <xsl:variable name="idUE" select="$UE/@id"/>
                         <ol>
-                            <xsl:for-each select="//parcours/ref-semestre[@ref=$idSemestre]/../nom">
-                                <xsl:variable name="parcoursName" select="."/>
-
-                                <li>
-                                    <a href="../parcours/{$parcoursName}.html">
-                                        <xsl:value-of select="$parcoursName"/>
-                                    </a>
-                                </li>
+                            <xsl:for-each select="//semestre[bloc/ref-ue/@ref=$idUE]">
+                                <xsl:variable name="idSemestre" select="@id"/>
+                                <xsl:for-each select="//parcours[ref-semestre/@ref=$idSemestre]">
+                                    <xsl:variable name="parcoursName" select="./nom"/>
+                                    <li>
+                                        <a href="../parcours/{$parcoursName}.html">
+                                            <xsl:value-of select="$parcoursName"/>
+                                        </a>
+                                    </li>
+                                </xsl:for-each>
                             </xsl:for-each>
                         </ol>
                     </body>
@@ -179,9 +193,12 @@
         <xsl:for-each select="//parcours">
             <xsl:variable name="name" select="./nom"></xsl:variable>
             <xsl:result-document href="www/parcours/{$name}.html">
-                <html>
-                    <meta charset="UTF-8"/> <!-- Préférer à iso 8859-1 ?? caractères illisibles-->
-                    <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                    <head>
+                        <meta charset="UTF-8"/>
+                        <link rel="stylesheet" type="text/css" href="../../style.css"/>
+                        <title>{$name}</title>
+                    </head>
                     <body>
                         <xsl:call-template name="menuStatique"/>
                         <h1>

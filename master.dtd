@@ -3,8 +3,8 @@
 <!ELEMENT  tag (#PCDATA)>
 <!ATTLIST tag  attribute CDATA #REQUIRED>
 
-<!ELEMENT  masterInformatique    (listeIntervenants, parcours+, semestre+)>
-<!ELEMENT  ue  		(nom, identifiant, nbcredit, resume?, plan?, lieu?, refintervenant)>
+<!ELEMENT  masterInformatique    (listeIntervenants, parcours+, listeUE, semestre+)>
+<!ELEMENT  ue  		(nom, nbcredit, resume?, plan?, lieu?, refintervenant)>
 
 <!ELEMENT   nom  	        (#PCDATA)>
 <!ELEMENT   identifiant     (#PCDATA)>
@@ -25,15 +25,17 @@
 <!--Possibilité d'ajouté une difficulté en attribut de "ue" -->
 <!ENTITY % difficulte "difficul (facile|moyen|difficile) #IMPLIED">
 <!ATTLIST ue %difficulte;>
+<!ATTLIST ue    id  ID #REQUIRED>
 
 <!ELEMENT   listeIntervenants   (intervenant+) >
-<!ATTLIST   intervenant  id  ID  #IMPLIED>
+<!ATTLIST   intervenant  id  ID  #REQUIRED>
 <!ELEMENT   refintervenant   EMPTY>
 <!ATTLIST   refintervenant  ref IDREF  #IMPLIED>
 
 <!ELEMENT   parcours        (nom, listeResponsables, description, listeDebouches,ref-semestre+)>
 <!ELEMENT   listeResponsables   (responsable+)>
 <!ELEMENT   responsable         (#PCDATA)>
+<!ELEMENT   listeUE             (ue+)>
 
 <!ELEMENT   listeDebouches      (metier+)>
 <!ELEMENT   metier              (#PCDATA)>
@@ -41,9 +43,12 @@
 <!ELEMENT   semestre            (bloc+)>
 <!ATTLIST   semestre    id ID #REQUIRED>
 
-<!ELEMENT   bloc                (ue+, role)>
+<!ELEMENT   bloc                (ref-ue+, role)>
 <!ELEMENT   role                (#PCDATA)>
 
+
+<!ELEMENT   ref-ue              EMPTY>
+<!ATTLIST   ref-ue          ref IDREF #REQUIRED>
 <!ELEMENT   ref-semestre        EMPTY>
 <!ATTLIST   ref-semestre    ref IDREF #REQUIRED>
 
@@ -60,3 +65,4 @@
 
 <!ELEMENT tabLine (tab-element+)>
 <!ELEMENT tab-element (#PCDATA)>
+

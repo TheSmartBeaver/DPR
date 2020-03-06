@@ -85,7 +85,7 @@
             <metier>Architecte logiciel</metier>
         </listeDebouches>
         <ref-semestre ref="S1"/>
-        <ref-semestre ref="S2"/>
+        <ref-semestre ref="S2ILD"/>
         <ref-semestre ref="S3ILD"/>
     </parcours>
 
@@ -123,79 +123,80 @@
         <ref-semestre ref="S1"/>
     </parcours>
 
+    <listeUE>
+    <ue id="Res">
+        <nom>Reseaux</nom>
+        <nbcredit>4</nbcredit>
+        <lieu>Luminy;St-Jerôme;St-Charles</lieu>
+        <refintervenant ref="EG"/>
+    </ue>
+    <ue id="POC">
+        <nom>Programmation Objet Concurrente</nom>
+        <nbcredit>3</nbcredit>
+        <lieu>Luminy;St-Jerôme;St-Charles</lieu>
+        <refintervenant ref="Rem"/>
+    </ue>
+        <ue id="DPR">
+            <nom>Donnees P-R</nom>
+            <nbcredit>3</nbcredit>
+            <resume><description>
+                <paragraphe>Etude de XML, XSL, DTD, Schéma W3C, XQuery</paragraphe>
+                <paragraphe><gras>Pour un même XML, plusieurs mise en forme possible</gras></paragraphe>
+            </description></resume>
+            <refintervenant ref="JL"/>
+        </ue>
+        <ue id="Secur">
+            <nom>Sécurité des applications</nom>
+            <nbcredit>6</nbcredit>
+            <refintervenant ref="JL"/>
+        </ue>
+        <ue id="cryp">
+            <nom>Cryptographie</nom>
+            <nbcredit>3</nbcredit>
+            <refintervenant ref="Rem"/>
+        </ue>
+        <ue id="ihm">
+            <nom>Interface Homme Machine</nom>
+            <nbcredit>3</nbcredit>
+            <refintervenant ref="Nono"/>
+        </ue>
+        <ue id="BigD">
+            <nom>Big Data</nom>
+            <nbcredit>6</nbcredit>
+            <refintervenant ref="Nono"/>
+        </ue>
+        <ue id="GL2">
+            <nom>Génie Logiciel 2</nom>
+            <nbcredit>6</nbcredit>
+            <refintervenant ref="JL"/>
+        </ue>
+    </listeUE>
+
     <semestre id="S1">
         <bloc>
-            <ue>
-                <nom>Reseaux</nom>
-                <identifiant>Res</identifiant>
-                <nbcredit>4</nbcredit>
-                <lieu>Luminy;St-Jerôme;St-Charles</lieu>
-                <refintervenant ref="EG"/>
-            </ue>
-
-            <ue>
-                <nom>Programmation Objet Concurrente</nom>
-                <identifiant>POC</identifiant>
-                <nbcredit>3</nbcredit>
-                <lieu>Luminy;St-Jerôme;St-Charles</lieu>
-                <refintervenant ref="Rem"/>
-            </ue>
+            <ref-ue ref="Res"/>
+            <ref-ue ref="POC"/>
             <role>UEs Obligatoires</role>
         </bloc>
     </semestre>
 
-    <semestre id="S2">
+    <semestre id="S2ILD">
         <bloc>
-            <ue>
-                <nom>Donnees P-R</nom>
-                <identifiant>m1dPr</identifiant>
-                <nbcredit>3</nbcredit>
-                <resume><description>
-                    <paragraphe>Etude de XML, XSL, DTD, Schéma W3C, XQuery</paragraphe>
-                    <paragraphe><gras>Pour un même XML, plusieurs mise en forme possible</gras></paragraphe>
-                </description></resume>
-                <refintervenant ref="JL"/>
-            </ue>
-            <ue>
-                <nom>Sécurité des applications</nom>
-                <identifiant>m1Secur</identifiant>
-                <nbcredit>6</nbcredit>
-                <refintervenant ref="JL"/>
-            </ue>
+            <ref-ue ref="DPR"/>
+            <ref-ue ref="Secur"/>
             <role>UE obligatoires pour le parcours ILD</role>
         </bloc>
         <bloc>
-            <ue>
-                <nom>Cryptographie</nom>
-                <identifiant>m1Cryp</identifiant>
-                <nbcredit>3</nbcredit>
-                <refintervenant ref="Rem"/>
-            </ue>
-            <ue>
-                <nom>Interface Homme Machine</nom>
-                <identifiant>IHM</identifiant>
-                <nbcredit>3</nbcredit>
-                <refintervenant ref="Nono"/>
-            </ue>
-
+            <ref-ue ref="ihm"/>
+            <ref-ue ref="cryp"/>
             <role>options à choisir</role>
         </bloc>
     </semestre>
 
     <semestre id="S3ILD">
         <bloc>
-            <ue>
-                <nom>Big Data</nom>
-                <identifiant>Big_D</identifiant>
-                <nbcredit>6</nbcredit>
-                <refintervenant ref="Nono"/>
-            </ue>
-            <ue>
-                <nom>Génie Logiciel 2</nom>
-                <identifiant>GL2</identifiant>
-                <nbcredit>6</nbcredit>
-                <refintervenant ref="JL"/>
-            </ue>
+            <ref-ue ref="BigD"/>
+            <ref-ue ref="GL2"/>
             <role>UEs obligatoires</role>
         </bloc>
     </semestre>

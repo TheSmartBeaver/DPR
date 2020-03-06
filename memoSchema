@@ -35,3 +35,8 @@ SCHEEEE
 -Un élément simple est un élément qui ne contient qu'une valeur dont le type est dit simple. Il ne contient pas d'autres éléments.
 -Un élément simple peut donc être une balise qui ne contient aucun attribut et dans laquelle aucune autre balise n'est imbriquée. Un attribut d'une balise peut également être considéré comme un élément simple
 
+- ue/@id "id de l'ue" parcours/ref-semestre/@ref semestre/bloc/ref-ue/@ref
+
+-on récupère l'id de l'ue
+-on récupère tous les id des semestres où il y'a l'id de l'UE
+-on récupère tous les parcours ayant l'id des semestres sélectionnés

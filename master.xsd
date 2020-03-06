@@ -6,7 +6,16 @@
             <xs:sequence>
                 <xs:element ref='listeIntervenants'/>
                 <xs:element ref='parcours' maxOccurs='unbounded'/>
+                <xs:element ref='listeUE'/>
                 <xs:element ref='semestre' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name='listeUE'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='ue' maxOccurs='unbounded'/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -15,13 +24,13 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref='nom'/>
-                <xs:element ref='identifiant'/>
                 <xs:element ref='nbcredit'/>
                 <xs:element ref='resume' minOccurs='0' maxOccurs='1'/>
                 <xs:element ref='plan' minOccurs='0' maxOccurs='1'/>
                 <xs:element ref='lieu' minOccurs='0' maxOccurs='1'/>
                 <xs:element ref='refintervenant'/>
             </xs:sequence>
+            <xs:attribute name='id' type='xs:ID' use='required'/>
             <xs:attribute name='difficul' use='optional'>
                 <xs:simpleType>
                     <xs:restriction base='xs:string'>
@@ -148,10 +157,16 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name='ref-ue'>
+        <xs:complexType>
+            <xs:attribute name='ref' type='xs:IDREF' use='required'/>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name='bloc'>
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref='ue' maxOccurs='unbounded'/>
+                <xs:element ref='ref-ue' maxOccurs='unbounded'/>
                 <xs:element ref='role'/>
             </xs:sequence>
         </xs:complexType>
