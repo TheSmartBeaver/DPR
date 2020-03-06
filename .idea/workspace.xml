@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f42677f7-c058-43e5-93a0-86c194740d55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.Makefile.swp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterILD.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.dtd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterILD.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterILD.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/masterILD.xsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parcoursUtils.xsl" beforeDir="false" afterPath="$PROJECT_DIR$/parcoursUtils.xsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.odt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.dtd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterILD22.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcoursUtils.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testXQuery.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testXQuery.xql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/www/Accueil/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/Accueil/accueil.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/Big Data.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Big Data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/UEs/Cryptographie.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Cryptographie.html" afterDir="false" />
@@ -23,7 +28,8 @@
       <change beforePath="$PROJECT_DIR$/www/intervenants/Morin Remi.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Morin Remi.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/intervenants/Noël Novelli.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Noël Novelli.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/intervenants/liste_Intervenants.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/liste_Intervenants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/parcours/ ILD Ingénierie du logiciel et des données .html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/parcours/FSI Fiabilité et sécurité informatique.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/parcours/FSI Fiabilité et sécurité informatique.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/parcours/ILD Ingénierie du logiciel et des données.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/parcours/ILD Ingénierie du logiciel et des données.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,32 +113,6 @@
       <screen x="0" y="28" width="1600" height="844" />
     </state>
     <state x="456" y="278" key="com.intellij.ide.util.TipDialog/0.28.1600.844@0.28.1600.844" timestamp="1583424234434" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="xslt">
-          <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>194</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="xslt">
-          <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>210</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="xslt">
-          <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>207</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="xslt">
-          <url>file://$PROJECT_DIR$/masterILD.xsl</url>
-          <line>235</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

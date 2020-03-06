@@ -1,7 +1,7 @@
 web: 
 	rm -rf www	
 	mkdir -p www/Accueil
-	java -jar saxon9he.jar -xsl:masterILD.xsl masterILD.xml > www/Accueil/accueil.html
+	java -jar saxon9he.jar -xsl:xsl/master.xsl master.xml > www/Accueil/accueil.html
 
 #tidy -im -asxhtml -indent www/parcours/*.html
 #tidy -im -asxhtml -indent www/intervenants/*.html
@@ -11,12 +11,17 @@ tidy:
 	tidy -im -asxhtml -indent www/*/*.html
 
 dtd:
-	xmllint --noout --dtdvalid masterILD.dtd masterILD.xml
+	xmllint --noout --dtdvalid master.dtd master.xml
 
 xsd:
-	xmllint --schema masterILD.xsd masterILD.xml --noout
+	xmllint --schema master.xsd master.xml --noout
 
 xq:
-	java -cp saxon9he.jar net.sf.saxon.Query testXQuery.xql -o:www/xq.html
+	java -cp saxon9he.jar net.sf.saxon.Query xq.xql -o:www/xq.html
 
-all: dtd xsd web tidy xq
+all: dtd xsd web
+	sleep 2
+	tidy -im -asxhtml -indent www/*/*.html
+	sleep 1
+	java -cp saxon9he.jar net.sf.saxon.Query xq.xql -o:www/xq.html
+

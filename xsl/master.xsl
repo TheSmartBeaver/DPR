@@ -13,6 +13,7 @@
                 exclude-result-prefixes="xs xdt err fn">
 
     <xsl:include href="parcoursUtils.xsl"/>
+    <xsl:include href="description.xsl"/>
 
     <xsl:output
             doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
@@ -213,58 +214,6 @@
         </xsl:for-each>
     </xsl:template>
 
-    <!-- Templates match nécessaires pour la page de présentation du parcours -->
-
-    <xsl:template match="paragraphe">
-        <p>
-            <xsl:apply-templates/>
-        </p>
-    </xsl:template>
-
-    <xsl:template match="liste-pucee">
-        <ol>
-            <xsl:for-each select="paragraphe">
-                <li>
-                    <p>
-                        <xsl:apply-templates/>
-                    </p>
-                </li>
-            </xsl:for-each>
-        </ol>
-    </xsl:template>
-
-    <xsl:template match="gras">
-        <b>
-            <xsl:value-of select="."/>
-        </b>
-    </xsl:template>
-
-    <xsl:template match="italique">
-        <i>
-            <xsl:value-of select="."/>
-        </i>
-    </xsl:template>
-
-    <xsl:template match="link">
-        <xsl:variable name="url" select="."/>
-        <a href="{$url}">
-            <xsl:value-of select="."/>
-        </a>
-    </xsl:template>
-
-    <xsl:template match="tab">
-        <table>
-            <xsl:for-each select="tabLine">
-                <tr>
-                    <xsl:for-each select="tab-element">
-                        <td>
-                            <xsl:value-of select="."/>
-                        </td>
-                    </xsl:for-each>
-                </tr>
-            </xsl:for-each>
-        </table>
-    </xsl:template>
 
     <xsl:template match="listeDebouches">
         <h2>Liste des débouchés possibles :</h2>

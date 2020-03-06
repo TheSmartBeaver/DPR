@@ -2,7 +2,7 @@
 
 <!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Sat Feb 29 12:19:18 CET 2020 -->
 
-<!DOCTYPE masterInformatique SYSTEM "masterILD.dtd">
+<!DOCTYPE masterInformatique SYSTEM "master.dtd">
 
 <!--<masterInformatique
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
