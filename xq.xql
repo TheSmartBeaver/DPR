@@ -1,5 +1,8 @@
 <html>
 <body>
+<head>
+                <meta charset="UTF-8"/>
+</head>
 <h1>Liste des intervenants du master informatique</h1>
 <ol> {
     for $interv in doc("master.xml")//listeIntervenants/intervenant
@@ -12,12 +15,14 @@
                 return(<li>{$ue/nom}</li>)
         } </ol>,
         <h3>parcours attachés :</h3>,
-        <ul>{for $parcours in distinct-values(for $refSemestre in doc("master.xml")//descendant::ue[refintervenant/@ref=data($interv/@id)]/../../@id
-                               order by $refSemestre/nom descending
-                               return(doc("master.xml")//parcours[ref-semestre/@ref=data($refSemestre)]/nom)
-                               )
-        return(<li>{$parcours}</li>)
-        }</ul>
+        <ul>{for $p in distinct-values(for $ue in doc("master.xml")//descendant::ue[refintervenant/@ref=data($interv/@id)]
+		      return(for $refSemestre in doc("master.xml")//semestre[bloc/ref-ue/@ref=$ue/@id]/@id
+				     return(for $parcours in doc("master.xml")//parcours[ref-semestre/@ref=data($refSemestre)]/nom
+				             return(data($parcours))
+				           )
+			        ))
+			  return(<li>{data($p)}</li>)
+	}</ul>
 
 )} </ol> </body>
 </html>

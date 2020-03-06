@@ -40,6 +40,12 @@
             <site>LuigiSantocanale.perso.luminy@univ-amu.fr</site>
         </intervenant>
 
+        <intervenant id="den">
+            <nom>Denis Lugiez</nom>
+            <mail>DenisLugiez@lis-lab.fr</mail>
+            <site>DenisLugiez.perso.luminy@univ-amu.fr</site>
+        </intervenant>
+
         <intervenant id="giu">
             <nom>Giuseppe DI MOLFETTA</nom>
             <mail>GiuseppeDiMolfetta@lis-lab.fr</mail>
@@ -50,6 +56,12 @@
             <nom>Cecile Capponi</nom>
             <mail>CecileCapponi@lis-lab.fr</mail>
             <site>CecileCapponi.perso.luminy@univ-amu.fr</site>
+        </intervenant>
+
+        <intervenant id="omar">
+            <nom>Omar Boucelma</nom>
+            <mail>OmarBoucelma@lis-lab.fr</mail>
+            <site>OmarBoucelma.perso.luminy@univ-amu.fr</site>
         </intervenant>
 
 
@@ -236,12 +248,17 @@
         <ue id="FL">
             <nom>Fiabilité logicielle</nom>
             <nbcredit>3</nbcredit>
-            <refintervenant ref="luigui"/>
+            <refintervenant ref="den"/>
         </ue>
         <ue id="progF">
             <nom>Programmation fonctionelle</nom>
             <nbcredit>3</nbcredit>
             <refintervenant ref="luigui"/>
+        </ue>
+        <ue id="intD">
+            <nom>Intégration des données</nom>
+            <nbcredit>3</nbcredit>
+            <refintervenant ref="omar"/>
         </ue>
     </listeUE>
 
@@ -279,6 +296,7 @@
         <bloc>
             <ref-ue ref="progF"/>
             <ref-ue ref="ihm"/>
+            <ref-ue ref="intD"/>
             <role>options à choisir</role>
         </bloc>
     </semestre>
