@@ -65,7 +65,7 @@
                 <head>
                     <meta charset="UTF-8"/>
                     <link rel="stylesheet" type="text/css" href="../../style.css"/>
-                    <title>{$name}</title>
+                    <title><xsl:value-of select="$name"/></title>
                 </head>
                 <body>
                     <xsl:call-template name="menuStatique"/>
@@ -116,7 +116,7 @@
                     <head>
                         <meta charset="UTF-8"/>
                         <link rel="stylesheet" type="text/css" href="../../style.css"/>
-                        <title>{$name}</title>
+                        <title><xsl:value-of select="$name"/></title>
                     </head>
                     <body>
                         <xsl:call-template name="menuStatique"/>
@@ -197,7 +197,7 @@
                     <head>
                         <meta charset="UTF-8"/>
                         <link rel="stylesheet" type="text/css" href="../../style.css"/>
-                        <title>{$name}</title>
+                        <title><xsl:value-of select="$name"/></title>
                     </head>
                     <body>
                         <xsl:call-template name="menuStatique"/>

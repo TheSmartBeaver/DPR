@@ -11,31 +11,45 @@
 <masterInformatique>
     <listeIntervenants>
         <intervenant id="Rem">
-            <identifiant>Rem</identifiant>
             <nom>Morin Remi</nom>
             <mail>remiMorin@lis-lab.fr</mail>
             <site>remiMorin.perso.luminy@univ-amu.fr</site>
         </intervenant>
 
         <intervenant id="JL">
-            <identifiant>Jean_Luc</identifiant>
             <nom>Jean Luc Massat</nom>
             <mail>jeanLucMassat@lis-lab.fr</mail>
             <site>jeanLucMassat.perso.luminy@univ-amu.fr</site>
         </intervenant>
 
         <intervenant id="EG">
-            <identifiant>"Emm_G"</identifiant>
             <nom>Emmanuel Godard</nom>
             <mail>emmanuelGodard@lis-lab.fr</mail>
             <site>emmanuelGodard.perso.luminy@univ-amu.fr</site>
         </intervenant>
 
         <intervenant id="Nono">
-            <identifiant>Noel_No</identifiant>
             <nom>Noël Novelli</nom>
             <mail>noelNovelli@lis-lab.fr</mail>
             <site>noelNovelli.perso.luminy@univ-amu.fr</site>
+        </intervenant>
+
+        <intervenant id="luigui">
+            <nom>Luigi Santocanale</nom>
+            <mail>LuigiSantocanale@lis-lab.fr</mail>
+            <site>LuigiSantocanale.perso.luminy@univ-amu.fr</site>
+        </intervenant>
+
+        <intervenant id="giu">
+            <nom>Giuseppe DI MOLFETTA</nom>
+            <mail>GiuseppeDiMolfetta@lis-lab.fr</mail>
+            <site>GiuseppeDiMolfetta.perso.luminy@univ-amu.fr</site>
+        </intervenant>
+
+        <intervenant id="cecile">
+            <nom>Cecile Capponi</nom>
+            <mail>CecileCapponi@lis-lab.fr</mail>
+            <site>CecileCapponi.perso.luminy@univ-amu.fr</site>
         </intervenant>
 
 
@@ -50,7 +64,8 @@
             <paragraphe>L'objectif de ce parcours est de former des informaticiens qui soient capables à la fois de
                 travailler
             </paragraphe>
-            <paragraphe>sur les problématiques du <gras>développement logiciel</gras> (spécification, conception, réalisation,
+            <paragraphe>sur les problématiques du <gras>développement logiciel</gras> (spécification, conception,
+                réalisation,
                 qualité, tests, plateforme JEE et WEB)
             </paragraphe>
             <paragraphe>et sur les problématiques de la <gras>modélisation et du traitement de données</gras> (administration,
@@ -61,7 +76,8 @@
             <liste-pucee>
                 <paragraphe>pas trop de maths mais quand même</paragraphe>
                 <paragraphe>apprentissage des tests logiciels pour des applis robustes</paragraphe>
-                <paragraphe>Cette formation est <gras>super</gras> avec  <italique>des profs de folie</italique>
+                <paragraphe>Cette formation est <gras>super</gras> avec
+                    <italique>des profs de folie</italique>
                 </paragraphe>
                 <paragraphe>Plus d'info sur les bénéfices de la formation sur
                     <link>plusdinfololgg.univ-amu.fr</link>
@@ -104,7 +120,8 @@
             <paragraphe>management de la sécurité, administration d’infrastructures, normes et qualité, audit de
                 sécurité, R&amp;D).
             </paragraphe>
-            <paragraphe>La formation apporte des <gras>compétences fortes en sécurité et fiabilité des applications</gras> (web,
+            <paragraphe>La formation apporte des <gras>compétences fortes en sécurité et fiabilité des applications
+            </gras> (web,
                 mobiles, embarquées), en sécurité organisationnelle, en sécurité des réseaux,
             </paragraphe>
             <paragraphe>en hacking éthique, en protocoles et architectures cryptographiques, en méthodes formelles.
@@ -121,33 +138,46 @@
 
         </listeDebouches>
         <ref-semestre ref="S1"/>
+        <ref-semestre ref="S2FSI"/>
     </parcours>
 
     <listeUE>
-    <ue id="Res">
-        <nom>Reseaux</nom>
-        <nbcredit>4</nbcredit>
-        <lieu>Luminy;St-Jerôme;St-Charles</lieu>
-        <refintervenant ref="EG"/>
-    </ue>
-    <ue id="POC">
-        <nom>Programmation Objet Concurrente</nom>
-        <nbcredit>3</nbcredit>
-        <lieu>Luminy;St-Jerôme;St-Charles</lieu>
-        <refintervenant ref="Rem"/>
-    </ue>
+        <ue id="Res">
+            <nom>Reseaux</nom>
+            <nbcredit>4</nbcredit>
+            <lieu>Luminy;St-Jerôme;St-Charles</lieu>
+            <refintervenant ref="EG"/>
+        </ue>
+        <ue id="POC">
+            <nom>Programmation Objet Concurrente</nom>
+            <nbcredit>3</nbcredit>
+            <lieu>Luminy;St-Jerôme;St-Charles</lieu>
+            <refintervenant ref="Rem"/>
+        </ue>
         <ue id="DPR">
             <nom>Donnees P-R</nom>
             <nbcredit>3</nbcredit>
-            <resume><description>
-                <paragraphe>Etude de XML, XSL, DTD, Schéma W3C, XQuery</paragraphe>
-                <paragraphe><gras>Pour un même XML, plusieurs mise en forme possible</gras></paragraphe>
-            </description></resume>
+            <resume>
+                <description>
+                    <paragraphe>Etude de XML, XSL, DTD, Schéma W3C, XQuery</paragraphe>
+                    <paragraphe>
+                        <gras>Pour un même XML, plusieurs mise en forme possible</gras>
+                    </paragraphe>
+                </description>
+            </resume>
             <refintervenant ref="JL"/>
         </ue>
         <ue id="Secur">
             <nom>Sécurité des applications</nom>
             <nbcredit>6</nbcredit>
+            <resume>
+                <description>
+                    <paragraphe>
+                        <gras>cyberedu</gras>
+                        (<italique>panorama des attaques – défenses standards</italique>).
+                    </paragraphe>
+                </description>
+            </resume>
             <refintervenant ref="JL"/>
         </ue>
         <ue id="cryp">
@@ -158,6 +188,24 @@
         <ue id="ihm">
             <nom>Interface Homme Machine</nom>
             <nbcredit>3</nbcredit>
+            <resume>
+                <description>
+                    <tab>
+                        <tabLine>
+                            <tab-element>Qt / programmation événementielle</tab-element>
+                        </tabLine>
+                        <tabLine>
+                            <tab-element>informatique graphique/OpenGL</tab-element>
+                        </tabLine>
+                        <tabLine>
+                            <tab-element>Ergonomie/Responsive</tab-element>
+                        </tabLine>
+                        <tabLine>
+                            <tab-element>mise en niveau en C++</tab-element>
+                        </tabLine>
+                    </tab>
+                </description>
+            </resume>
             <refintervenant ref="Nono"/>
         </ue>
         <ue id="BigD">
@@ -165,10 +213,35 @@
             <nbcredit>6</nbcredit>
             <refintervenant ref="Nono"/>
         </ue>
+        <ue id="GL1">
+            <nom>Génie Logiciel 1</nom>
+            <nbcredit>6</nbcredit>
+            <refintervenant ref="JL"/>
+        </ue>
         <ue id="GL2">
             <nom>Génie Logiciel 2</nom>
             <nbcredit>6</nbcredit>
             <refintervenant ref="JL"/>
+        </ue>
+        <ue id="ISD">
+            <nom>Intro à la science des données</nom>
+            <nbcredit>3</nbcredit>
+            <refintervenant ref="cecile"/>
+        </ue>
+        <ue id="Compl">
+            <nom>Complexité</nom>
+            <nbcredit>6</nbcredit>
+            <refintervenant ref="giu"/>
+        </ue>
+        <ue id="FL">
+            <nom>Fiabilité logicielle</nom>
+            <nbcredit>3</nbcredit>
+            <refintervenant ref="luigui"/>
+        </ue>
+        <ue id="progF">
+            <nom>Programmation fonctionelle</nom>
+            <nbcredit>3</nbcredit>
+            <refintervenant ref="luigui"/>
         </ue>
     </listeUE>
 
@@ -176,6 +249,9 @@
         <bloc>
             <ref-ue ref="Res"/>
             <ref-ue ref="POC"/>
+            <ref-ue ref="GL1"/>
+            <ref-ue ref="ISD"/>
+            <ref-ue ref="Compl"/>
             <role>UEs Obligatoires</role>
         </bloc>
     </semestre>
@@ -184,11 +260,25 @@
         <bloc>
             <ref-ue ref="DPR"/>
             <ref-ue ref="Secur"/>
+            <ref-ue ref="FL"/>
             <role>UE obligatoires pour le parcours ILD</role>
         </bloc>
         <bloc>
             <ref-ue ref="ihm"/>
             <ref-ue ref="cryp"/>
+            <role>options à choisir</role>
+        </bloc>
+    </semestre>
+
+    <semestre id="S2FSI">
+        <bloc>
+            <ref-ue ref="FL"/>
+            <ref-ue ref="cryp"/>
+            <role>UE obligatoires pour le parcours FSI</role>
+        </bloc>
+        <bloc>
+            <ref-ue ref="progF"/>
+            <ref-ue ref="ihm"/>
             <role>options à choisir</role>
         </bloc>
     </semestre>

@@ -13,7 +13,7 @@
 <!ELEMENT   plan  	        (#PCDATA)>
 <!ELEMENT   lieu  	        (#PCDATA)>
 
-<!ELEMENT   intervenant     (identifiant, nom, mail, site)>
+<!ELEMENT   intervenant     (nom, mail, site)>
 <!ELEMENT   mail            (#PCDATA)>
 <!ELEMENT   site          	(#PCDATA)>
 
@@ -30,7 +30,7 @@
 <!ELEMENT   listeIntervenants   (intervenant+) >
 <!ATTLIST   intervenant  id  ID  #REQUIRED>
 <!ELEMENT   refintervenant   EMPTY>
-<!ATTLIST   refintervenant  ref IDREF  #IMPLIED>
+<!ATTLIST   refintervenant  ref IDREF  #REQUIRED>
 
 <!ELEMENT   parcours        (nom, listeResponsables, description, listeDebouches,ref-semestre+)>
 <!ELEMENT   listeResponsables   (responsable+)>

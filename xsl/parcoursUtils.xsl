@@ -79,7 +79,7 @@
     <!-- Cette template prendra un paramètre : la ref du semestre-->
     <xsl:template name="liste-ues-du-semestre">
         <xsl:param name="refSemestre"/>
-        <h3>Semestrep :
+        <h3>Semestre :
             <xsl:value-of select="/descendant::semestre[@id=$refSemestre]/@id"/>
         </h3>
         <ol>

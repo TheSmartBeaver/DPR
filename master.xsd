@@ -79,7 +79,6 @@
 
         <xs:complexType name="intervenant">
             <xs:sequence>
-                <xs:element ref='identifiant'/>
                 <xs:element ref='nom'/>
                 <xs:element name="mail" type="xs:string"/>
                 <xs:element name="site" type="xs:string"/>
