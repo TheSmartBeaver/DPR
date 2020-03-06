@@ -21,6 +21,7 @@
 				             return(data($parcours))
 				           )
 			        ))
+			  order by $p
 			  return(<li>{data($p)}</li>)
 	}</ul>
 

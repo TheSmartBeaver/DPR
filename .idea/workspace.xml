@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f42677f7-c058-43e5-93a0-86c194740d55" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.~lock.Documentation.odt#" beforeDir="false" afterPath="$PROJECT_DIR$/.~lock.Documentation.odt#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation.odt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.odt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/Fiabilité logicielle.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/Fiabilité logicielle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/UEs/liste_UEs.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/UEs/liste_UEs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/intervenants/Luigi Santocanale.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/Luigi Santocanale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/intervenants/liste_Intervenants.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/intervenants/liste_Intervenants.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/parcours/FSI Fiabilité et sécurité informatique.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/parcours/FSI Fiabilité et sécurité informatique.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/xq.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/xq.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xq.xql" beforeDir="false" afterPath="$PROJECT_DIR$/xq.xql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
